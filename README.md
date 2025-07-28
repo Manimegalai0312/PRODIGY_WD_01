@@ -11,10 +11,11 @@ DURATION : 1 MONTH
 TASK 1 : RESPONSIVE LANDING PAGE
 
 OUTPUT: 
+
 <img width="1355" height="619" alt="Screenshot 2025-07-28 083245" src="https://github.com/user-attachments/assets/03ed0413-3590-4442-998f-c80f724dcacb" />
 
 
-
+<img width="1355" height="642" alt="Screenshot 2025-07-28 083220" src="https://github.com/user-attachments/assets/64e2db77-0f15-4b0f-9e12-7159e512a030" />
 
 
 
