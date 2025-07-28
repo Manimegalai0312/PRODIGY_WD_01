@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "title": "Manimegalai - Professional Web Developer",
+    "description": "Custom landing page for Manimegalai, a professional web developer",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "fonts": {
+      "primary": "Poppins",
+      "source": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap",
+      "icons": "Font Awesome 5",
+      "icons_source": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    }
+  },
+  "colors": {
+    "primary": "#6a1b9a",
+    "secondary": "#ab47bc",
+    "background": "#fff9fb",
+    "text": "#333",
+    "light_text": "#555",
+    "white": "#fff",
+    "accent": "#f0d6ff"
+  },
+  "header": {
+    "logo": {
+      "text": "Manimegalai",
+      "highlight": ".",
+      "color": "#6a1b9a",
+      "highlight_color": "#ab47bc"
+    },
+    "navigation": [
+      {"text": "Services", "link": "#features"},
+      {"text": "Process", "link": "#how-it-works"},
+      {"text": "Testimonials", "link": "#testimonials"},
+      {"text": "Contact", "link": "#cta"}
+    ],
+    "background": "#fff",
+    "shadow": "0 2px 10px rgba(0,0,0,0.05)"
+  },
+  "hero": {
+    "background": {
+      "gradient": "linear-gradient(135deg, rgba(106, 27, 154, 0.8), rgba(171, 71, 188, 0.7))",
+      "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    "title": "Beautiful Websites, Built with Passion",
+    "description": "Hi, I'm Manimegalai - a professional web developer specializing in creating stunning, responsive websites that help businesses grow.",
+    "button": {
+      "text": "Let's Work Together",
+      "link": "#cta"
+    }
+  },
+  "features": {
+    "title": "My Services",
+    "subtitle": "Custom solutions tailored to your business needs",
+    "items": [
+      {
+        "icon": "https://cdn-icons-png.flaticon.com/512/1005/1005141.png",
+        "title": "Web Design",
+        "description": "Custom, responsive designs that look beautiful on all devices and reflect your brand identity."
+      },
+      {
+        "icon": "https://cdn-icons-png.flaticon.com/512/2282/2282188.png",
+        "title": "Web Development",
+        "description": "Clean, efficient code using modern technologies like HTML5, CSS3, JavaScript, and React."
+      },
+      {
+        "icon": "https://cdn-icons-png.flaticon.com/512/2933/2933245.png",
+        "title": "E-Commerce",
+        "description": "Online stores with secure payment gateways, product management, and shopping cart functionality."
+      }
+    ]
+  },
+  "process": {
+    "title": "My Process",
+    "subtitle": "Simple steps to bring your vision to life",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Discovery",
+        "description": "We discuss your goals, target audience, and project requirements."
+      },
+      {
+        "number": 2,
+        "title": "Design",
+        "description": "I create mockups and prototypes for your review and feedback."
+      },
+      {
+        "number": 3,
+        "title": "Development",
+        "description": "Your website is built with clean code and modern technologies."
+      },
+      {
+        "number": 4,
+        "title": "Testing",
+        "description": "Rigorous testing across devices and browsers ensures quality."
+      },
+      {
+        "number": 5,
+        "title": "Launch",
+        "description": "Your website goes live with full support during the transition."
+      },
+      {
+        "number": 6,
+        "title": "Maintenance",
+        "description": "Optional ongoing support and updates to keep your site fresh."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "What my clients say about working with me",
+    "items": [
+      {
+        "content": "Manimegalai transformed our online presence completely. Her attention to detail and creative approach resulted in a website that perfectly represents our brand.",
+        "author": {
+          "image": "https://randomuser.me/api/portraits/women/43.jpg",
+          "name": "Priya Sharma",
+          "position": "Founder, Bloom Boutique"
+        }
+      },
+      {
+        "content": "Working with Manimegalai was an absolute pleasure. She delivered our e-commerce site ahead of schedule and it has significantly increased our sales.",
+        "author": {
+          "image": "https://randomuser.me/api/portraits/women/65.jpg",
+          "name": "Ananya Patel",
+          "position": "CEO, Crafted Homes"
+        }
+      },
+      {
+        "content": "As a small business owner, I needed someone who could understand my vision. Manimegalai not only understood but improved upon it with her expertise.",
+        "author": {
+          "image": "https://randomuser.me/api/portraits/women/28.jpg",
+          "name": "Meera Krishnan",
+          "position": "Owner, Spice & Soul Café"
+        }
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "description": "Let's create something amazing together. Get in touch today for a free consultation.",
+    "button": {
+      "text": "Get Your Free Quote",
+      "link": "#contact"
+    },
+    "background": "linear-gradient(135deg, #6a1b9a, #ab47bc)"
+  },
+  "footer": {
+    "about": {
+      "title": "Manimegalai",
+      "description": "Professional web developer creating beautiful, functional websites that help businesses thrive online.",
+      "social": [
+        {"icon": "fab fa-instagram", "link": "#"},
+        {"icon": "fab fa-twitter", "link": "#"},
+        {"icon": "fab fa-linkedin-in", "link": "#"},
+        {"icon": "fab fa-github", "link": "#"}
+      ]
+    },
+    "links": [
+      {
+        "title": "Quick Links",
+        "items": [
+          {"text": "Services", "link": "#features"},
+          {"text": "Process", "link": "#how-it-works"},
+          {"text": "Testimonials", "link": "#testimonials"},
+          {"text": "Contact", "link": "#cta"}
+        ]
+      },
+      {
+        "title": "Services",
+        "items": [
+          {"text": "Web Design", "link": "#"},
+          {"text": "Web Development", "link": "#"},
+          {"text": "E-Commerce", "link": "#"},
+          {"text": "Website Maintenance", "link": "#"}
+        ]
+      }
+    ],
+    "contact": {
+      "title": "Contact Me",
+      "items": [
+        {"icon": "fas fa-map-marker-alt", "text": "Chennai, Tamil Nadu"},
+        {"icon": "fas fa-phone", "text": "+91 98765 43210"},
+        {"icon": "fas fa-envelope", "text": "hello@manimegalai.dev"}
+      ]
+    },
+    "copyright": "© 2023 Manimegalai. All Rights Reserved.",
+    "background": "#6a1b9a"
+  },
+  "responsive": {
+    "breakpoints": {
+      "mobile": "768px"
+    },
+    "adjustments": {
+      "header": {
+        "stack_navigation": true,
+        "center_items": true
+      },
+      "process_steps": {
+        "full_width": true,
+        "hide_arrows": true
+      }
+    }
+  }
+}
