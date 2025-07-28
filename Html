@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manimegalai - Professional Web Developer</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff9fb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #6a1b9a;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #ab47bc;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ab47bc;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(171, 71, 188, 0.3);
+        }
+        
+        .btn:hover {
+            background: #8e24aa;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(171, 71, 188, 0.4);
+        }
+
+        /* Header Styles */
+        header {
+            background: #fff;
+            color: #6a1b9a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #6a1b9a;
+        }
+        
+        .logo span {
+            color: #ab47bc;
+        }
+        
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        header nav ul li {
+            margin-left: 30px;
+        }
+        
+        header nav ul li a {
+            color: #6a1b9a;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ab47bc;
+        }
+        
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(106, 27, 154, 0.8), rgba(171, 71, 188, 0.7)), 
+                        url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #f0d6ff;
+        }
+
+        /* Features Section */
+        #features {
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #ab47bc;
+            border-radius: 3px;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(106, 27, 154, 0.05);
+            border: 1px solid #f0e5ff;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106, 27, 154, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #f5e5ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .feature-icon img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .feature h3 {
+            color: #6a1b9a;
+            font-size: 1.4rem;
+        }
+
+        /* How It Works Section */
+        #how-it-works {
+            background: #faf5ff;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            flex: 0 0 calc(33.333% - 20px);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -25px;
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ab47bc"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>') no-repeat center;
+            opacity: 0.5;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #ab47bc;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(171, 71, 188, 0.3);
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background: #fff;
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(106, 27, 154, 0.05);
+            border: 1px solid #f0e5ff;
+        }
+
+        .testimonial:before {
+            content: '"';
+            font-size: 80px;
+            color: #ab47bc;
+            opacity: 0.1;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-content {
+            margin-bottom: 25px;
+            font-style: italic;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid #f0e5ff;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: #6a1b9a;
+        }
+
+        .author-info p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        #cta {
+            background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+            color: #fff;
+            text-align: center;
+        }
+
+        #cta h2, #cta p {
+            color: #fff;
+        }
+
+        #cta .btn {
+            background: #fff;
+            color: #ab47bc;
+            margin-top: 20px;
+        }
+
+        #cta .btn:hover {
+            background: #f5e5ff;
+        }
+
+        /* Footer */
+        footer {
+            background: #6a1b9a;
+            color: #fff;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: #ab47bc;
+        }
+
+        .footer-col p {
+            color: #e0c4ff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            color: #e0c4ff;
+            transition: all 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #ab47bc;
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ab47bc;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #e0c4ff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            
+            header nav ul {
+                margin-top: 15px;
+            }
+            
+            header nav ul li {
+                margin: 0 10px;
+            }
+            
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .step {
+                flex: 0 0 100%;
+            }
+
+            .step:not(:last-child):after {
+                display: none;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Manimegalai<span>.</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Services</a></li>
+                    <li><a href="#how-it-works">Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div>
+                <h1>Beautiful Websites, Built with Passion</h1>
+                <p>Hi, I'm Manimegalai - a professional web developer specializing in creating stunning, responsive websites that help businesses grow.</p>
+                <a href="#cta" class="btn">Let's Work Together</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Services</h2>
+                <p>Custom solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="Web Design">
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Custom, responsive designs that look beautiful on all devices and reflect your brand identity.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2282/2282188.png" alt="Web Development">
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Clean, efficient code using modern technologies like HTML5, CSS3, JavaScript, and React.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="E-Commerce">
+                    </div>
+                    <h3>E-Commerce</h3>
+                    <p>Online stores with secure payment gateways, product management, and shopping cart functionality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Process</h2>
+                <p>Simple steps to bring your vision to life</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We discuss your goals, target audience, and project requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Design</h3>
+                    <p>I create mockups and prototypes for your review and feedback.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Your website is built with clean code and modern technologies.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Testing</h3>
+                    <p>Rigorous testing across devices and browsers ensures quality.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Launch</h3>
+                    <p>Your website goes live with full support during the transition.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Maintenance</h3>
+                    <p>Optional ongoing support and updates to keep your site fresh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about working with me</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Manimegalai transformed our online presence completely. Her attention to detail and creative approach resulted in a website that perfectly represents our brand.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Priya Sharma">
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Founder, Bloom Boutique</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Working with Manimegalai was an absolute pleasure. She delivered our e-commerce site ahead of schedule and it has significantly increased our sales.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ananya Patel">
+                        <div class="author-info">
+                            <h4>Ananya Patel</h4>
+                            <p>CEO, Crafted Homes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>As a small business owner, I needed someone who could understand my vision. Manimegalai not only understood but improved upon it with her expertise.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Meera Krishnan">
+                        <div class="author-info">
+                            <h4>Meera Krishnan</h4>
+                            <p>Owner, Spice & Soul Café</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's create something amazing together. Get in touch today for a free consultation.</p>
+            <a href="#contact" class="btn">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Manimegalai</h3>
+                    <p>Professional web developer creating beautiful, functional websites that help businesses thrive online.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Services</a></li>
+                        <li><a href="#how-it-works">Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#cta">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">E-Commerce</a></li>
+                        <li><a href="#">Website Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Me</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> hello@manimegalai</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Manimegalai. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
