@@ -27,7 +27,6 @@ OUTPUT:
 
 *<img width="1366" height="612" alt="Screenshot 2025-07-28 083305" src="https://github.com/user-attachments/assets/2bce000f-e71a-471c-9147-41cb00673f29" />
 
-*
 
 
 # 🌟 description
