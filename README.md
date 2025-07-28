@@ -12,15 +12,21 @@ TASK 1 : RESPONSIVE LANDING PAGE
 
 OUTPUT: 
 
+
 <img width="1348" height="637" alt="Screenshot 2025-07-28 083141" src="https://github.com/user-attachments/assets/8917882a-7ee4-45eb-8922-f2cb9393f9c7" />
+
 
 <img width="1366" height="617" alt="Screenshot 2025-07-28 083201" src="https://github.com/user-attachments/assets/5ceb6abf-5474-4b19-bed2-163095609c70" />
 
+
 <img width="1355" height="642" alt="Screenshot 2025-07-28 083220" src="https://github.com/user-attachments/assets/64e2db77-0f15-4b0f-9e12-7159e512a030" />
+
 
 <img width="1355" height="619" alt="Screenshot 2025-07-28 083245" src="https://github.com/user-attachments/assets/03ed0413-3590-4442-998f-c80f724dcacb" />
 
+
 *<img width="1366" height="612" alt="Screenshot 2025-07-28 083305" src="https://github.com/user-attachments/assets/2bce000f-e71a-471c-9147-41cb00673f29" />
+
 *
 
 
